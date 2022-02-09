@@ -15,10 +15,10 @@ basic.forever(function () {
         if (fruit.get(LedSpriteProperty.X) == player.get(LedSpriteProperty.X)) {
             game.addScore(1)
             speed += -10
-            fruit.set(LedSpriteProperty.Y, 0)
-            fruit.set(LedSpriteProperty.X, randint(0, 4))
         } else {
             game.gameOver()
         }
+        fruit.set(LedSpriteProperty.Y, 0)
+        fruit.set(LedSpriteProperty.X, randint(0, 4))
     }
 })
