@@ -4,6 +4,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     player.change(LedSpriteProperty.X, 1)
 })
+let special = 0
 let player: game.LedSprite = null
 player = game.createSprite(2, 4)
 let fruit = game.createSprite(randint(0, 4), 0)
@@ -19,6 +20,12 @@ basic.forever(function () {
         } else {
             speed = 500
             game.removeLife(1)
+        }
+        special = randint(0, 10)
+        if (false) {
+            fruit.set(LedSpriteProperty.Blink, 300)
+        } else {
+            fruit.set(LedSpriteProperty.Blink, 0)
         }
         fruit.set(LedSpriteProperty.Y, 0)
         fruit.set(LedSpriteProperty.X, randint(0, 4))
